@@ -1,0 +1,7 @@
+{% load contentblock_extras %}
+
+{% for block in content %}
+<div class="contentblock">
+    {{ block.content|markdown|safe }}
+</div>
+{% endfor%}

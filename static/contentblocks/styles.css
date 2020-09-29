@@ -1,0 +1,27 @@
+/* Contentblock styles */
+
+*{
+    margin:0;
+    padding: 0;
+}
+.contentblock  > * + *{
+   padding-top: 16px;
+}
+
+article .contentblock{
+    background: #e0e0e0;
+    border: 2px solid #ccc;
+    padding: 16px 32px;
+}
+
+footer{
+    background: #333;
+    padding: 16px;
+}
+
+footer .contentblock{
+    color:#ccc;
+}
+footer a{
+    color: #f0f;
+}

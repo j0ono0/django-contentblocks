@@ -1,0 +1,25 @@
+{% extends 'contentblocks/base.html' %}
+{% load contentblock_extras %}
+{% load static %}
+
+{% block title %}Contentblocks{% endblock %}
+
+
+{% block head %}
+    {{ block.super }}
+    <!-- page specific css and blocking js files and here -->
+{% endblock %}
+
+
+{% block body %}
+    <h1>Contentblocks</h1>
+    <p>A simple way for authors to insert and edit blocks of content.</p>
+    {% contentblock 'home' request.user %}
+       
+{% endblock %}
+
+
+{% block foot %}
+    {{ block.super }}
+    <!-- page specific js scripts here -->
+{% endblock %}

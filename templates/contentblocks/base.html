@@ -1,0 +1,35 @@
+{% load contentblock_extras %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Suez+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'contentblocks/styles.css' %}">
+
+        <title>{% block title %}Contentblocks{% endblock %}</title>
+        {% block head %}{% endblock %}
+    </head>
+	<body>
+        <header>
+            <!-- include app-wide banner/masthead -->
+        </header>
+        <article>
+            <div class="main">
+                {% block body %}{% endblock %}
+            </div>
+            </article>
+        <footer>
+            <!-- include app footer -->
+            {% contentblock 'footer' request.user %}
+
+        </footer>
+        {% block foot %}<!-- add app-wide JS scripts here -->{% endblock %}    
+
+    </body>
+</html>
+
